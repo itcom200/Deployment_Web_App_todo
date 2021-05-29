@@ -41,3 +41,7 @@ runserver
    (venv)$ python manage.py runserver
 
 Support heroku deploy
+
+run unittest
+=========
+python -m unittest tests/TestNumber.py
