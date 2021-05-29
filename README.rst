@@ -39,3 +39,5 @@ runserver
 ::
 
    (venv)$ python manage.py runserver
+
+Support heroku deploy
