@@ -42,6 +42,6 @@ runserver
 
 Support heroku deploy
 
-run unittest
+Run unittest
 =========
 python -m unittest tests/TestNumber.py
