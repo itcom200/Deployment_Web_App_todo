@@ -20,11 +20,27 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Jenkins Job Trigger
-        uses: estherk0/jenkins-trigger@1.0
-        with:
-          url: 'https://b844e466d6fc.ngrok.io'
-          user_name: 'admin'
-          api_token: '114ab2336f57df6e0d6f510db8ced6637e'
-          job_name: 'WebAppPipeline'
-          parameter: '{"BRANCH_NAME": "${{ github.head_ref }}"}'
+    - name: jenkins-action-parametrized
+      # You may pin to the exact commit or the version.
+      # uses: enflo/jenkins-action@6da9dde0cae53e12d3beaab724f1757c474f1819
+      uses: enflo/jenkins-action@0.1.2
+      with:
+        # Jenkins URL
+        url: 'https://b844e466d6fc.ngrok.io'
+        # Jenkins USER
+        user: 'admin'
+        # Jenkins USER TOCKEN
+        token: '114ab2336f57df6e0d6f510db8ced6637e'
+        # Jenkins USER TOCKEN
+        job: 'WebAppPipeline'
+        # Jenkins Parameters
+        parameters: '${{ github.head_ref }}'
+      
+      # - name: Jenkins Job Trigger
+      #   uses: estherk0/jenkins-trigger@1.0
+      #  with:
+      #    url: 'https://b844e466d6fc.ngrok.io'
+      #    user_name: 'admin'
+      #    api_token: '114ab2336f57df6e0d6f510db8ced6637e'
+      #    job_name: 'WebAppPipeline'
+      #    parameter: '{"BRANCH_NAME": "${{ github.head_ref }}"}'
