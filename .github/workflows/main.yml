@@ -20,21 +20,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: jenkins-action-parametrized
+    - name: Run jenkins jobs
       # You may pin to the exact commit or the version.
-      # uses: enflo/jenkins-action@6da9dde0cae53e12d3beaab724f1757c474f1819
-      uses: enflo/jenkins-action@0.1.2
+      # uses: Mondtic/build-jenkins-job@5a56427af05b7dfc13bd04ea16e37c6cf5f0174e
+      uses: Mondtic/build-jenkins-job@v1.0.0
       with:
-        # Jenkins URL
-        url: 'https://b844e466d6fc.ngrok.io'
-        # Jenkins USER
-        user: 'admin'
-        # Jenkins USER TOCKEN
-        token: '114ab2336f57df6e0d6f510db8ced6637e'
-        # Jenkins USER TOCKEN
-        job: 'WebAppPipeline'
-        # Jenkins Parameters
-        parameters: '${{ github.head_ref }}'
+        # full Jenkins site url
+        jenkins-url: 'https://b844e466d6fc.ngrok.io'
+        # Jenkins api token
+        jenkins-token: '114ab2336f57df6e0d6f510db8ced6637e'
+        # Jenkins username
+        jenkins-user: 'admin'
+        # Jenkins job name
+        jenkins-job: 'WebAppPipeline'
+        # Jenkins job params. JSON string. i.e '{'STRING_PARAM': 'value1', 'BOOLEAN_PARAM': false}' 
+        jenkins-job-params: "{'BRANCH_NAME': '${{ github.head_ref }}'}"
       
       # - name: Jenkins Job Trigger
       #   uses: estherk0/jenkins-trigger@1.0
