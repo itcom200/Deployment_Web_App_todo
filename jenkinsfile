@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Get Code") {
             steps {
-                git branch: params.BRANCH_NAME,"https://github.com/atthaboon/django-example-todo.git"
+                git branch: params.BRANCH_NAME, url: 'https://github.com/atthaboon/django-example-todo.git'
             }
         }
         stage("Install library") {
