@@ -34,7 +34,7 @@ jobs:
         # Jenkins job name
         jenkins-job: 'WebAppPipeline'
         # Jenkins job params. JSON string. i.e '{'STRING_PARAM': 'value1', 'BOOLEAN_PARAM': false}' 
-        jenkins-job-params: "{'BRANCH_NAME': '${{ github.head_ref }}'}"
+        jenkins-job-params: '{"BRANCH_NAME": "${{ github.head_ref }}"}'
       
       # - name: Jenkins Job Trigger
       #   uses: estherk0/jenkins-trigger@1.0
