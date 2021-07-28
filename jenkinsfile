@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'BRANCH_NAME', defaultValue: 'master', description: 'Specific Branch')
+    }
+
     stages {
         stage("Get Code") {
             steps {
-                git "https://github.com/atthaboon/django-example-todo.git"
+                git branch: params.BRANCH_NAME,"https://github.com/atthaboon/django-example-todo.git"
             }
         }
         stage("Install library") {
