@@ -1,4 +1,4 @@
-psycopg2==2.8.6
+psycopg2-binary==2.8.6
 Django==2.2.1
 docutils==0.14
 django-debug-toolbar==1.11
@@ -6,7 +6,7 @@ django-extensions==2.1.7
 django-jet==1.0.8
 djangorestframework==3.9.4
 google-api-python-client==1.7.9
-flake8
-gunicorn
-django-heroku
-unittest-xml-reporting
+flake8==6.1.0
+gunicorn==20.1.0
+django-heroku==0.3.1
+unittest-xml-reporting==3.0.4
