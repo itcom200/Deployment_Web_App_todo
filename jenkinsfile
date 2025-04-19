@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent {
+        label 'built-in||BVM1'
+        //label 'BVM1 || BVM2 || BVM3' คอมเครื่องไหน
+    }
 
     stages {
         stage("Get Code Bas testing") {
