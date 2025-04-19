@@ -24,3 +24,35 @@ pipeline {
         }
     }
 } 
+
+
+// pipeline {
+//     agent any
+
+//     parameters {
+//         string(name: 'BRANCH_NAME', defaultValue: 'master', description: 'Specific Branch')
+//     }
+
+//     stages {
+//         stage("Get Code") {
+//             steps {
+//                 git branch: params.BRANCH_NAME, url: 'https://github.com/atthaboon/django-example-todo.git'
+//             }
+//         }
+//         stage("Install library") {
+//             steps {
+//                 bat "pip install -r requirements.txt"
+//             }
+//         }
+//         stage("Unit test") {
+//             steps {
+//                 bat("python tests/TestNumber.py")
+//             }
+//             post {
+//                 always {
+//                     junit "test-reports/*.xml"
+//                 }
+//             }
+//         }
+//     }
+// }
