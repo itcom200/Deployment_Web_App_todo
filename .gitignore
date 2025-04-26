@@ -4,4 +4,4 @@ venv
 wheelhouse
 .idea
 .vscode/settings.json
-test-reports/
+test-reports/*.xml

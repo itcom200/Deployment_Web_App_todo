@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any //ให้ run node หรือ label ไหนก็ได้ถ้าว่าง
 
     stages {
         stage("Get Code Bas testing") {
@@ -18,12 +18,17 @@ pipeline {
             }
         }
     }
-    post{
-        always{
+    post{ // บล็อกของขั้นตอน (steps) ที่จะถูกรัน หลังจาก pipeline หรือ stage จบลง 
+        always{ //alway ออเว คือ run ทุกๆครั้ง
             junit "test-reports/*.xml"
         }
     }
 } 
+
+
+
+
+
 
 
 // pipeline {
