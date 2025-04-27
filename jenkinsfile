@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Unit test bas testing"){
             steps{
-                bat "python -m unittest tests.TestNumber"
+                bat "python tests/TestNumber.py"
             }
         }
     }
