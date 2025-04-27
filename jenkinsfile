@@ -1,6 +1,9 @@
 pipeline {
     agent any //ให้ run node หรือ label ไหนก็ได้ถ้าว่าง
 
+    options{
+        buildDiscarder(logRotator(numToKeepStr: '3'))
+    }
     stages {
         stage("Get Code Bas testing") {
             steps {
