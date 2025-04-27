@@ -15,11 +15,7 @@ pipeline {
         }
         stage("Unit test bas testing"){
             steps{
-                bat "python -m unittest discover -s tests -p 'Test*.py' > test-reports/test_results.xml"
-                //'Test*.py' คือ ขึ้นต้นด้วย Test * คือเป็นอะไรก็ได้ที่ขึ้นด้วย Test run ทั้งหมด
-                //bat "python -m unittest tests.TestNumber"
-
-
+                bat "python -m unittest tests.TestNumber"
             }
         }
     }
